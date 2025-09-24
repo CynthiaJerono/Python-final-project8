@@ -5,20 +5,14 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
-
-# Page configuration
-st.set_page_config(
-    page_title="COVID-19 Impact Dashboard",
-    page_icon="🏥",
-    layout="wide",
-    initial_sidebar_state="@st.cache_data
-def load_data():
-    '''Load CSV from Google Drive and return DataFrame'''
-    url = "https://drive.google.com/uc?id=1mqouGVQv_QThAGK8cN4N1vuXPQaRjNla"
-    df = pd.read_csv(url)
+import seaborn a
+@st.cache_data
+def load_clean_data():
+    """Load and return cleaned dataset"""
+    df = pd.read_csv("covid_data.csv")
     df['date'] = pd.to_datetime(df['date'])
-    df['year'] = df['date'].dt.year  # same as before
+    df['year'] = df['date'].dt.year  # extract year from date
+    reture as before
     return df
 
 # Load the data
