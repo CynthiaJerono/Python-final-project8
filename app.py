@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 @st.cache_data
 def load_clean_data():
     """Load and return cleaned dataset"""
-    df = pd.read_csv("covid_data.csv")
+    df = pd.read_csv("covid-data.csv")
     df['date'] = pd.to_datetime(df['date'])
     df['year'] = df['date'].dt.year
     return df
