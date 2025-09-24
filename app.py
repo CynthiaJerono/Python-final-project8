@@ -153,3 +153,9 @@ st.sidebar.info("""
 """)
 st.sidebar.markdown("---")
 st.sidebar.caption("Built following the step-by-step assignment structure")
+lization  
+- **Government Response**: Restrictions, testing, vaccination
+""")
+
+st.sidebar.markdown("---")
+st.sidebar.caption("Built following the step-by-step assignment structure")
