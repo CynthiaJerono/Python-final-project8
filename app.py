@@ -143,19 +143,17 @@ with st.expander("🔍 View Data Sample"):
     else:
         st.write("No data available for the selected filters")
 
+# Key insights sidebar
 st.sidebar.markdown("---")
 st.sidebar.header("💡 Key Insights")
 st.sidebar.info("""
 **Three Pillars Framework:**
+
 - **Burden**: Case numbers, mortality rates, peak impacts
 - **System Strain**: Hospital capacity, ICU utilization  
 - **Government Response**: Restrictions, testing, vaccination
 """)
+
 st.sidebar.markdown("---")
 st.sidebar.caption("Built following the step-by-step assignment structure")
-lization  
-- **Government Response**: Restrictions, testing, vaccination
-""")
-
-st.sidebar.markdown("---")
-st.sidebar.caption("Built following the step-by-step assignment structure")
+
