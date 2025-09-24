@@ -1,23 +1,17 @@
-
 # COVID-19 Three Pillars Analysis Dashboard
 # Streamlit app for interactive exploration
 
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn a
+import seaborn as sns
+
 @st.cache_data
 def load_clean_data():
     """Load and return cleaned dataset"""
     df = pd.read_csv("covid_data.csv")
     df['date'] = pd.to_datetime(df['date'])
     df['year'] = df['date'].dt.year  # extract year from date
-    reture as before
-    return df
-
-# Load the data
-df = load_data()
-dt.year
     return df
 
 # Load data
@@ -186,6 +180,11 @@ st.sidebar.info("""
 
 - **Burden**: Case numbers, mortality rates, peak impacts
 - **System Strain**: Hospital capacity, ICU utilization  
+- **Government Response**: Restrictions, testing, vaccination
+""")
+
+st.sidebar.markdown("---")
+st.sidebar.caption("Built following the step-by-step assignment structure")apacity, ICU utilization  
 - **Government Response**: Restrictions, testing, vaccination
 """)
 

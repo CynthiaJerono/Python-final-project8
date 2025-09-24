@@ -1,4 +1,3 @@
-
 # COVID-19 Three Pillars Analysis Dashboard
 # Streamlit app for interactive exploration
 
@@ -7,23 +6,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Page configuration
-st.set_page_config(
-    page_title="COVID-19 Impact Dashboard",
-    page_icon="🏥",
-    layout="wide",
-    initial_sidebar_state="@st.cache_data
-def load_data():
-    '''Load CSV from Google Drive and return DataFrame'''
-    url = "https://drive.google.com/uc?id=1mqouGVQv_QThAGK8cN4N1vuXPQaRjNla"
-    df = pd.read_csv(url)
+@st.cache_data
+def load_clean_data():
+    """Load and return cleaned dataset"""
+    df = pd.read_csv("covid_data.csv")
     df['date'] = pd.to_datetime(df['date'])
-    df['year'] = df['date'].dt.year  # same as before
-    return df
-
-# Load the data
-df = load_data()
-dt.year
+    df['year'] = df['date'].dt.year  # extract year from date
     return df
 
 # Load data
@@ -192,6 +180,11 @@ st.sidebar.info("""
 
 - **Burden**: Case numbers, mortality rates, peak impacts
 - **System Strain**: Hospital capacity, ICU utilization  
+- **Government Response**: Restrictions, testing, vaccination
+""")
+
+st.sidebar.markdown("---")
+st.sidebar.caption("Built following the step-by-step assignment structure")apacity, ICU utilization  
 - **Government Response**: Restrictions, testing, vaccination
 """)
 
