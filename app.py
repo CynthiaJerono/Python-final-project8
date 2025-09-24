@@ -18,11 +18,7 @@ def load_clean_data():
 df = load_clean_data()
 
 # Title and description
-st.title("🏥 COVID-19: Three Pillars Impact Analysis")
-st.markdown("""
-**Interactive exploration of disease burden, healthcare system strain, and government response effectiveness**
-
-**Follows the three-pillar framework: Burden | System Strain | Government Response**
+st.title("🏥 COVID-19: Three Pillarernment Response**
 """)
 
 # Sidebar controls
